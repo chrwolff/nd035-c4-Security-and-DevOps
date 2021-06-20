@@ -1,0 +1,349 @@
+Started by user Christian Wolff
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/udacity-ecommerce-application
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential github_ssh
+Cloning the remote Git repository
+Cloning repository git@github.com:chrwolff/nd035-c4-Security-and-DevOps.git
+ > git init /var/jenkins_home/workspace/udacity-ecommerce-application # timeout=10
+Fetching upstream changes from git@github.com:chrwolff/nd035-c4-Security-and-DevOps.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.11.0'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:chrwolff/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:chrwolff/nd035-c4-Security-and-DevOps.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision f45c013249ed24848683bb3519f0103030dcc326 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f45c013249ed24848683bb3519f0103030dcc326 # timeout=10
+Commit message: "Merge pull request #2 from chrwolff/dev"
+ > git rev-list --no-walk f45c013249ed24848683bb3519f0103030dcc326 # timeout=10
+Parsing POMs
+Established TCP socket on 37599
+[starter_code] $ /var/jenkins_home/tools/hudson.model.JDK/openJDK_11/bin/java -cp /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3/boot/plexus-classworlds-2.6.0.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3/conf/logging jenkins.maven3.agent.Maven35Main /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3 /var/jenkins_home/war/WEB-INF/lib/remoting-4.5.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 37599
+<===[JENKINS REMOTING CAPACITY]===>���channel started
+Executing Maven:  -B -f /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/pom.xml clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] Deleting /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 22 source files to /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.ApiTests
+11:25:43.664 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:25:43.706 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:25:43.847 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.demo.ApiTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:25:43.894 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ApiTests], using SpringBootContextLoader
+11:25:43.904 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.ApiTests]: class path resource [com/example/demo/ApiTests-context.xml] does not exist
+11:25:43.906 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.ApiTests]: class path resource [com/example/demo/ApiTestsContext.groovy] does not exist
+11:25:43.907 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.ApiTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:25:43.909 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.ApiTests]: ApiTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:25:44.112 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.demo.ApiTests]
+11:25:44.363 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target/classes/com/example/demo/SareetaApplication.class]
+11:25:44.366 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.ApiTests
+11:25:44.690 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.demo.ApiTests]: using defaults.
+11:25:44.692 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:25:44.735 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a7288a3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2974f221, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@58fe0499, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@686449f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@665df3c6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@68b6f0d6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4044fb95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@aa549e5, org.springframework.test.context.event.EventPublishingTestExecutionListener@36f48b4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5c00384f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b7ff809, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1bb564e2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@62e6b5c8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f792b9b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b8233cd]
+11:25:44.749 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7756c3cd testClass = ApiTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2313052e testClass = ApiTests, locations = '{}', classes = '{class com.example.demo.SareetaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@2bd2b28e key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@27508c5d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1e4d3ce5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@518caac3, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@57ad2aa7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1d483de4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5be6e01c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+11:25:44.884 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+11:25:46.174 [main] INFO  c.e.d.ApiTests - Starting ApiTests using Java 11 on 70d6b50d1bf3 with PID 7471 (started by jenkins in /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code)
+11:25:46.200 [main] INFO  c.e.d.ApiTests - No active profile set, falling back to default profiles: default
+11:25:46.313 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64e92d61
+11:25:48.436 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:25:48.605 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 148 ms. Found 4 JPA repository interfaces.
+11:25:51.675 [main] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:25:51.861 [main] INFO  o.h.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+11:25:52.246 [main] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:25:52.541 [main] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+11:25:53.042 [main] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+11:25:53.085 [main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:25:56.096 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:25:56.128 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:25:58.249 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:25:59.468 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+11:26:00.128 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+11:26:00.224 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d8e1fa6, org.springframework.security.web.context.SecurityContextPersistenceFilter@3085befb, org.springframework.security.web.header.HeaderWriterFilter@792b9dd3, org.springframework.web.filter.CorsFilter@4587f0f9, org.springframework.security.web.authentication.logout.LogoutFilter@4965454c, com.example.demo.security.JWTAuthenticationVerificationFilter@22a22f1, com.example.demo.security.JWTAuthenticationFilter@2e76d0d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed19540, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57ac236a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63c88994, org.springframework.security.web.session.SessionManagementFilter@7730da00, org.springframework.security.web.access.ExceptionTranslationFilter@4abfa2ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@461b38ca]
+11:26:01.059 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:26:01.105 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+11:26:01.279 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+11:26:01.858 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+11:26:01.860 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+11:26:01.867 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 6 ms
+11:26:01.939 [main] INFO  c.e.d.ApiTests - Started ApiTests in 17.04 seconds (JVM running for 20.705)
+11:26:03.967 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.CartController#addTocart(ModifyCartRequest)
+11:26:03.976 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:04.053 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.CartController#addTocart(ModifyCartRequest)
+11:26:04.186 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.ModifyCartRequest@52ec5ba6]
+11:26:04.311 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:04.317 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.Cart@6a4f15bc]
+11:26:04.473 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.CartController#removeFromcart(ModifyCartRequest)
+11:26:04.476 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:04.488 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.CartController#removeFromcart(ModifyCartRequest)
+11:26:04.490 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.ModifyCartRequest@7479cdf7]
+11:26:04.530 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:04.531 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.Cart@d4f2f3d]
+11:26:05.082 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#submit(String)
+11:26:05.083 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:05.090 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#submit(String)
+11:26:05.128 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.demo.controllers.OrderController#handleException(EntityNotFoundException)
+11:26:05.129 [main] ERROR c.e.d.c.OrderController - User abc does not exist
+11:26:05.131 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [javax.persistence.EntityNotFoundException: abc]
+11:26:05.513 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItemById(Long)
+11:26:05.515 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:05.534 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItemById(Long)
+11:26:05.565 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:05.566 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.Item@20]
+11:26:05.946 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItems()
+11:26:05.947 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:05.955 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItems()
+11:26:05.980 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:05.982 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.example.demo.model.persistence.Item@20, com.example.demo.model.persistence.Item@21]]
+11:26:06.415 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#submit(String)
+11:26:06.418 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:06.431 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#submit(String)
+11:26:06.458 [main] INFO  c.e.d.c.OrderController - Order created for user testUser
+11:26:06.467 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:06.469 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.UserOrder@a47a011]
+11:26:06.883 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findByUserName(String)
+11:26:06.885 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:06.891 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findByUserName(String)
+11:26:06.902 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:06.903 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@4458887d]
+11:26:07.243 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItemsByName(String)
+11:26:07.245 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:07.257 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.ItemController#getItemsByName(String)
+11:26:07.283 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:07.285 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.example.demo.model.persistence.Item@20]]
+11:26:07.647 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findById(Long)
+11:26:07.648 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:07.661 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findById(Long)
+11:26:07.677 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:07.679 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@4cce889e]
+11:26:08.009 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#getOrdersForUser(String)
+11:26:08.010 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.026 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.OrderController#getOrdersForUser(String)
+11:26:08.060 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:08.062 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[]]
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.667 s - in com.example.demo.ApiTests
+[INFO] Running com.example.demo.AuthorizationTests
+11:26:08.122 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.AuthorizationTests], using SpringBootContextLoader
+11:26:08.124 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.AuthorizationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:26:08.127 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.AuthorizationTests]: AuthorizationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:26:08.158 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.AuthorizationTests
+11:26:08.186 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:26:08.190 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3ed1446c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e9bff08, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@54151d07, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e729fea, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1a345c6c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b26839d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17a756db, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2d10160a, org.springframework.test.context.event.EventPublishingTestExecutionListener@157ff8f8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4a1abba1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@67263db7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4a2bc71f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@20f94e9a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f213e97, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@693c7741]
+11:26:08.269 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findByUserName(String)
+11:26:08.286 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.354 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.354 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.356 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.360 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.CreateUserRequest@4b6ad2eb]
+11:26:08.360 [main] ERROR c.e.d.c.UserController - Either length is less than 7 or pass and conf pass do not match. Unable to create testUser
+11:26:08.361 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:08.363 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+11:26:08.395 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.396 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.397 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.401 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.CreateUserRequest@21632bf8]
+11:26:08.545 [main] INFO  c.e.d.c.UserController - User testUser created successfully
+11:26:08.547 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:08.547 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@a23b96b]
+11:26:08.566 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.722 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findByUserName(String)
+11:26:08.723 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.735 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#findByUserName(String)
+11:26:08.746 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:08.746 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@4a5e0faf]
+11:26:08.814 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.820 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.823 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.825 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.CreateUserRequest@320ca97c]
+11:26:08.969 [main] INFO  c.e.d.c.UserController - User testUser created successfully
+11:26:08.971 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:08.972 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@3a5663ef]
+11:26:08.978 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.985 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:08.989 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:08.992 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.CreateUserRequest@5d414943]
+11:26:09.004 [main] ERROR c.e.d.c.UserController - User testUser already exists
+11:26:09.009 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:09.011 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+11:26:09.108 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:09.109 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+11:26:09.112 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.controllers.UserController#createUser(CreateUserRequest)
+11:26:09.113 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.model.requests.CreateUserRequest@5379488c]
+11:26:09.280 [main] INFO  c.e.d.c.UserController - User testUser created successfully
+11:26:09.282 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+11:26:09.283 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.model.persistence.User@68bef3df]
+11:26:09.296 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.311 s - in com.example.demo.AuthorizationTests
+[INFO] Running com.example.demo.SareetaApplicationTests
+11:26:09.495 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+11:26:09.500 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:26:09.501 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:26:09.509 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+11:26:09.513 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:26:09.519 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c6ee543, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7594d189, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1418a1bd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49e54217, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@628af295, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31c17fd4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60052518, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@39336f5, org.springframework.test.context.event.EventPublishingTestExecutionListener@36b86248, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@cbd9494, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@45594dfe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5f67ff3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2ab87cb8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4ac1544f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4578d654]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+11:26:09.650 [main] INFO  c.e.d.SareetaApplicationTests - Starting SareetaApplicationTests using Java 11 on 70d6b50d1bf3 with PID 7471 (started by jenkins in /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code)
+11:26:09.664 [main] INFO  c.e.d.SareetaApplicationTests - No active profile set, falling back to default profiles: default
+11:26:09.688 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1adc38a0
+11:26:10.365 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:26:10.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+11:26:11.271 [main] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:26:11.285 [main] INFO  c.z.h.HikariDataSource - HikariPool-2 - Starting...
+11:26:11.289 [main] INFO  c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+11:26:11.290 [main] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:26:11.905 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:26:11.906 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:26:12.648 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:26:13.083 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+11:26:13.365 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+11:26:13.395 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@593d5f39, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fc92211, org.springframework.security.web.header.HeaderWriterFilter@50c442a5, org.springframework.web.filter.CorsFilter@5e537465, org.springframework.security.web.authentication.logout.LogoutFilter@31aec04a, com.example.demo.security.JWTAuthenticationVerificationFilter@4f27643d, com.example.demo.security.JWTAuthenticationFilter@5d267575, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63d8590c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@117bfeb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e512d7f, org.springframework.security.web.session.SessionManagementFilter@4eb313ed, org.springframework.security.web.access.ExceptionTranslationFilter@440309c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@438a2337]
+11:26:13.645 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:26:13.674 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+11:26:13.779 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+11:26:14.091 [main] INFO  c.e.d.SareetaApplicationTests - Started SareetaApplicationTests in 4.563 seconds (JVM running for 32.856)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.617 s - in com.example.demo.SareetaApplicationTests
+11:26:14.124 [SpringContextShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@1adc38a0, started on Sun Jun 20 11:26:09 UTC 2021
+11:26:14.125 [SpringContextShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@64e92d61, started on Sun Jun 20 11:25:46 UTC 2021
+11:26:14.163 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:26:14.167 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:26:14.171 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:26:14.187 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:26:14.200 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:26:14.201 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+11:26:14.217 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:26:14.221 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ auth-course ---
+[INFO] Building jar: /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target/auth-course-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.5:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  55.017 s
+[INFO] Finished at: 2021-06-20T11:26:20Z
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/pom.xml to com.example/auth-course/0.0.1-SNAPSHOT/auth-course-0.0.1-SNAPSHOT.pom
+[JENKINS] Archiving /var/jenkins_home/workspace/udacity-ecommerce-application/starter_code/target/auth-course-0.0.1-SNAPSHOT.jar to com.example/auth-course/0.0.1-SNAPSHOT/auth-course-0.0.1-SNAPSHOT.jar
+channel stopped
+[Docker] INFO: Step 1/9 : FROM openjdk:11-slim as build
+[Docker] INFO: 
+
+[Docker] INFO:  ---> f0cb34b07f7d
+
+[Docker] INFO: Step 2/9 : WORKDIR build
+[Docker] INFO: 
+
+[Docker] INFO:  ---> Using cache
+
+[Docker] INFO:  ---> 5728f692b9a8
+
+[Docker] INFO: Step 3/9 : ARG JAR_FILE=target/*.jar
+[Docker] INFO: 
+
+[Docker] INFO:  ---> Using cache
+
+[Docker] INFO:  ---> fd7185680d07
+
+[Docker] INFO: Step 4/9 : COPY ${JAR_FILE} app.jar
+[Docker] INFO: 
+
+[Docker] INFO:  ---> 6c9d4fc37508
+
+[Docker] INFO: Step 5/9 : RUN java -Djarmode=layertools -jar app.jar extract
+[Docker] INFO: 
+
+[Docker] INFO:  ---> Running in 2ef083ceb065
+
+[Docker] INFO:  ---> cf44aeacf155
+
+[Docker] INFO: Step 6/9 : FROM openjdk:11-slim
+[Docker] INFO: 
+
+[Docker] INFO:  ---> f0cb34b07f7d
+
+[Docker] INFO: Step 7/9 : WORKDIR build
+[Docker] INFO: 
+
+[Docker] INFO:  ---> Using cache
+
+[Docker] INFO:  ---> 5728f692b9a8
+
+[Docker] INFO: Step 8/9 : COPY --from=build build/dependencies/ build/snapshot-dependencies/ build/spring-boot-loader/ build/application/ ./
+[Docker] INFO: 
+
+[Docker] INFO:  ---> 7a43e691074f
+
+[Docker] INFO: Step 9/9 : ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+[Docker] INFO: 
+
+[Docker] INFO:  ---> Running in 63cb85eb89a9
+
+[Docker] INFO:  ---> 570257ffba40
+
+[Docker] INFO: Successfully built 570257ffba40
+
+[Docker] INFO: Successfully tagged fraktus.io/udacity-ecommerce-application:latest
+
+[Docker] INFO: Build image id:570257ffba40
+Finished: SUCCESS
