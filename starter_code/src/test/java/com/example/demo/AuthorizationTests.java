@@ -94,6 +94,17 @@ public class AuthorizationTests {
     }
 
     @Test
+    public void loginWithWrongUser() throws Exception {
+        LoginRequest loginRequest = new LoginRequest(USERNAME, PASSWORD + "_ABC");
+
+        mvc.perform(
+            post(new URI("/login"))
+                .content(loginRequestJson.write(loginRequest).getJson())
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isUnauthorized());
+    }
+
+    @Test
     public void createUserTwiceFails() throws Exception {
         //create user
         mvc.perform(
@@ -126,7 +137,7 @@ public class AuthorizationTests {
     public void getUserForbidden() throws Exception {
         //get user without auth token should fail
         mvc.perform(get(new URI("/api/user/" + USERNAME)))
-            .andExpect(status().isForbidden());
+            .andExpect(status().isUnauthorized());
     }
 
     private CreateUserRequest getCreateUserRequest() {
